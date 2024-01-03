@@ -3,7 +3,8 @@ import "ag-grid-community/styles/ag-theme-alpine.css";
 import { useState } from "react";
 import { AgGridReact } from "ag-grid-react";
 
-const OrderReport = () => {
+const Invoices = () => {
+  // Row Data: The data to be displayed.
   const current =
     "border-2 rounded-2xl flex place-items-center justify-center h-1/2 w-32 border-[#1d4014]";
   const notCurrent =
@@ -17,127 +18,153 @@ const OrderReport = () => {
     {
       No: 1,
       Fname: "John",
-      LName: "Doe",
+      Lname: "Doe",
       Time: "2023-12-05, 15:23",
-      Item: "Birthday Cake",
+      IssueTime: "2023-12-08 10:00",
       Phone: "07592319512",
       Email_Addr: "john@example.com",
-      Status: "Pending",
+      TotalAmount: 19000,
+      Status: "Resolved",
     },
     {
       No: 2,
-      Fname: "Jane",
-      LName: "Smith",
-      Time: "2023-12-10, 10:45",
-      Item: "Anniversary Flowers",
-      Phone: "07845678901",
-      Email_Addr: "jane@example.com",
-      Status: "Pending",
+      Fname: "Alice",
+      Lname: "Smith",
+      Time: "2023-12-10, 18:45",
+      IssueTime: "2023-12-12 12:30",
+      Phone: "07851234987",
+      Email_Addr: "alice.smith@email.com",
+      TotalAmount: 23000,
+      Status: "Resolved",
     },
     {
       No: 3,
-      Fname: "Michael",
-      LName: "Johnson",
+      Fname: "Robert",
+      Lname: "Johnson",
       Time: "2023-12-15, 12:30",
-      Item: "Chocolate Box",
+      IssueTime: "2023-12-18 09:15",
       Phone: "07123456789",
-      Email_Addr: "michael@example.com",
-      Status: "Resolved",
+      Email_Addr: "robert.johnson@company.com",
+      TotalAmount: 15000,
+      Status: "Pending",
     },
     {
       No: 4,
       Fname: "Emily",
-      LName: "Davis",
-      Time: "2023-12-20, 18:15",
-      Item: "Holiday Cookies",
+      Lname: "Clark",
+      Time: "2023-12-20, 09:15",
+      IssueTime: "2023-12-22 20:00",
       Phone: "07987654321",
-      Email_Addr: "emily@example.com",
-      Status: "Resolved",
-    },
-    {
-      No: 5,
-      Fname: "Chris",
-      LName: "Brown",
-      Time: "2023-12-25, 08:00",
-      Item: "Christmas Hamper",
-      Phone: "07654321098",
-      Email_Addr: "chris@example.com",
-      Status: "Cancelled",
-    },
-    {
-      No: 6,
-      Fname: "Emma",
-      LName: "White",
-      Time: "2023-12-30, 14:45",
-      Item: "New Year's Eve Cake",
-      Phone: "07234567890",
-      Email_Addr: "emma@example.com",
-      Status: "Cancelled",
-    },
-    {
-      No: 7,
-      Fname: "Daniel",
-      LName: "Clark",
-      Time: "2024-01-05, 11:20",
-      Item: "Valentine's Day Roses",
-      Phone: "07456789012",
-      Email_Addr: "daniel@example.com",
+      Email_Addr: "emily.clark@gmail.com",
+      TotalAmount: 18000,
       Status: "Pending",
     },
     {
+      No: 5,
+      Fname: "David",
+      Lname: "Williams",
+      Time: "2023-12-25, 20:00",
+      IssueTime: "2023-12-28 09:45",
+      Phone: "07654321987",
+      Email_Addr: "david.williams@example.com",
+      TotalAmount: 25000,
+      Status: "Pending",
+    },
+    {
+      No: 6,
+      Fname: "Sophie",
+      Lname: "Anderson",
+      Time: "2023-12-08, 14:00",
+      IssueTime: "2023-12-10 16:45",
+      Phone: "07451234567",
+      Email_Addr: "sophie.anderson@email.com",
+      TotalAmount: 20000,
+      Status: "Pending",
+    },
+    {
+      No: 7,
+      Fname: "Michael",
+      Lname: "Turner",
+      Time: "2023-12-12, 09:45",
+      IssueTime: "2023-12-15 14:30",
+      Phone: "07893456789",
+      Email_Addr: "michael.turner@example.com",
+      TotalAmount: 16000,
+      Status: "Resolved",
+    },
+    {
       No: 8,
-      Fname: "Sophia",
-      LName: "Taylor",
-      Time: "2024-01-10, 17:30",
-      Item: "Thank You Bouquet",
-      Phone: "07123456789",
-      Email_Addr: "sophia@example.com",
+      Fname: "Olivia",
+      Lname: "Baker",
+      Time: "2023-12-18, 16:30",
+      IssueTime: "2023-12-20 11:15",
+      Phone: "07234567890",
+      Email_Addr: "olivia.baker@company.net",
+      TotalAmount: 22000,
       Status: "Resolved",
     },
     {
       No: 9,
-      Fname: "Matthew",
-      LName: "Harris",
-      Time: "2024-01-15, 13:10",
-      Item: "Get Well Soon Balloons",
-      Phone: "07890123456",
-      Email_Addr: "matthew@example.com",
-      Status: "Pending",
-    },
-    {
-      No: 10,
-      Fname: "Olivia",
-      LName: "Moore",
-      Time: "2024-01-20, 09:40",
-      Item: "Baby Shower Gift",
-      Phone: "07543210987",
-      Email_Addr: "olivia@example.com",
+      Fname: "Daniel",
+      Lname: "Miller",
+      Time: "2023-12-22, 11:15",
+      IssueTime: "2023-12-25 13:00",
+      Phone: "07987654321",
+      Email_Addr: "daniel.miller@example.com",
+      TotalAmount: 19000,
       Status: "Resolved",
     },
     {
+      No: 10,
+      Fname: "Grace",
+      Lname: "Harrison",
+      Time: "2023-12-28, 19:00",
+      IssueTime: "2023-12-30 17:45",
+      Phone: "07123456789",
+      Email_Addr: "grace.harrison@email.com",
+      TotalAmount: 27000,
+      Status: "Pending",
+    },
+    {
       No: 11,
-      Fname: "William",
-      LName: "Miller",
-      Time: "2024-01-25, 16:00",
-      Item: "Congratulations Flowers",
-      Phone: "07654321098",
-      Email_Addr: "william@example.com",
-      Status: "Cancelled",
+      Fname: "Nathan",
+      Lname: "Coleman",
+      Time: "2023-12-30, 10:30",
+      IssueTime: "2024-01-02 09:30",
+      Phone: "07651234567",
+      Email_Addr: "nathan.coleman@example.com",
+      TotalAmount: 21000,
+      Status: "Pending",
     },
     {
       No: 12,
-      Fname: "John",
-      LName: "Doe",
-      Time: "2023-12-05, 15:23",
-      Item: "Birthday Cake",
-      Phone: "07592319512",
-      Email_Addr: "john@example.com",
-      Status: "Pending",
+      Fname: "Isabel",
+      Lname: "Garcia",
+      Time: "2024-01-02, 13:45",
+      IssueTime: "2024-01-05 14:15",
+      Phone: "07897654321",
+      Email_Addr: "isabel.garcia@email.com",
+      TotalAmount: 24000,
+      Status: "Resolved",
     },
   ]);
-  const filterByStatus = (status) => {
-    const filteredRows = rowData.filter((row) => row.Status === status);
-    return filteredRows;
+  // Column Definitions: Defines & controls grid columns.
+  const [colDefs, setColDefs] = useState([
+    { field: "No" },
+    { field: "Fname" },
+    { field: "Lname" },
+    { field: "Time" },
+    { field: "EndTime" },
+    { field: "Item" },
+    { field: "Phone" },
+    { field: "Email_Addr" },
+    { field: "Status" },
+  ]);
+
+  const getRowStyle = (params) => {
+    return {
+      "border-radius": "5px",
+    };
   };
 
   const filterData = (filterType, filterValue) => {
@@ -161,32 +188,11 @@ const OrderReport = () => {
     }
   };
 
-  const updateTable = (status) => {
-    setDisplayData(filterByStatus(status));
-  };
-
   const [displayData, setDisplayData] = useState(filterByStatus(status));
-
-  // Column Definitions: Defines & controls grid columns.
-  const [colDefs, setColDefs] = useState([
-    { field: "No" },
-    { field: "Fname" },
-    { field: "LName" },
-    { field: "Time" },
-    { field: "Item" },
-    { field: "Phone" },
-    { field: "Email_Addr" },
-  ]);
-
-  const getRowStyle = (params) => {
-    return {
-      "border-radius": "5px",
-    };
-  };
 
   // Container: Defines the grid's theme & dimensions.
   return (
-    <div className={"ag-theme-alpine w-[1100px]"}>
+    <div className={"ag-theme-alpine h-[550px] w-[1100px]"}>
       <div className="flex justify-evenly h-16 place-items-center ">
         <div
           className={status == "Pending" ? current : notCurrent}
@@ -205,15 +211,6 @@ const OrderReport = () => {
           }}
         >
           <h1>Resolved</h1>
-        </div>
-        <div
-          className={status == "Cancelled" ? current : notCurrent}
-          onClick={() => {
-            setStatus("Cancelled");
-            updateTable("Cancelled");
-          }}
-        >
-          <h1>Cancelled</h1>
         </div>
       </div>
       <div className="outline-none pl-2 flex justify-evenly h-16 place-items-center ">
@@ -267,4 +264,4 @@ const OrderReport = () => {
   );
 };
 
-export default OrderReport;
+export default Invoices;
