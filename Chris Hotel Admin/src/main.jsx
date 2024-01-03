@@ -5,6 +5,6 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App className="m-0 p-0" />
+    <App className="m-0 p-0 w-screen" />
   </React.StrictMode>
 );

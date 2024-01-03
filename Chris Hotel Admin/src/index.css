@@ -14,11 +14,34 @@ html {
 }
 #root {
   padding: 0;
+  margin: 0;
+  width: 100%;
 }
 .links {
   font-family: "Lora", sans-serif;
   outline: none;
 }
 body {
-  background-color: rgb(229, 234, 238);
+  background-color: #e5eaee;
+  width: screen;
+}
+.test {
+  justify-self: left !important;
+}
+.ag-theme-alpine {
+  --ag-font-size: 14px;
+  --ag-font-family: Lora;
+  /* --ag-background-color: rgb(249, 245, 227); */
+  --ag-alpine-active-color: #1d4014;
+  --ag-row-hover-color: #d6c98eb5;
+  --ag-background-color: rgba(255, 255, 255, 0);
+}
+
+.ag-center-cols-container {
+  border: none !important;
+}
+
+/* Add border radius to the whole table */
+.ag-theme-alpine {
+  border-radius: 10px; /* Adjust the border-radius value as needed */
 }

@@ -1,8 +1,10 @@
+import BookingsReport from "../components/BookingsReport";
+
 const Reservations = () => {
   return (
-    <>
-      <h1>Reservations</h1>
-    </>
+    <div className="flex place-items-start flex-col w-[60rem] ml-44 mt-16">
+      <BookingsReport />
+    </div>
   );
 };
 

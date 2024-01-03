@@ -14,18 +14,18 @@ import { useRef } from "react";
 const App = () => {
   const appBody = useRef(null);
   return (
-    <div className="ml-0">
+    <div className="ml-0 grid grid-cols-2">
       <BrowserRouter>
         <div className="fixed">
           <Navbar />
         </div>
-        <div ref={appBody}>
+        <div ref={appBody} className="ml-36 w-full">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/orders" element={<Orders />} />
-            <Route path="/reservations" element={<Reservations />} />
+            <Route path="/bookings" element={<Reservations />} />
             <Route path="/activity" element={<ActivityLog />} />
             <Route path="/invoices" element={<Invoices />} />
             <Route path="/admins" element={<AdminAcc />} />

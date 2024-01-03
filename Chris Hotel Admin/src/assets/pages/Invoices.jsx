@@ -1,9 +1,11 @@
-const Invoices = () => {
+import Invoices from "../components/Invoices.jsx";
+
+const Invoice = () => {
   return (
-    <>
-      <h1>Invoices</h1>
-    </>
+    <div className="mt-16 ml-40">
+      <Invoices />
+    </div>
   );
 };
 
-export default Invoices;
+export default Invoice;

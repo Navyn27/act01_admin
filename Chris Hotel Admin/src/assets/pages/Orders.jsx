@@ -1,8 +1,10 @@
+import OrderReport from "../components/OrdersReport";
+
 const Orders = () => {
   return (
-    <>
-      <h1>Orders</h1>
-    </>
+    <div className="flex-col mt-16 ml-40">
+      <OrderReport />
+    </div>
   );
 };
 

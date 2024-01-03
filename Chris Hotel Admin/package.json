@@ -13,9 +13,14 @@
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.11.2",
     "@react-google-maps/api": "^2.18.1",
+    "ag-grid-react": "^31.0.1",
+    "apexcharts": "^3.45.0",
     "react": "^18.2.0",
+    "react-apexcharts": "^1.4.1",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.1"
+    "react-router-dom": "^6.11.1",
+    "recharts": "^2.8.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
