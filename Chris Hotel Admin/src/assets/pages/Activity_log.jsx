@@ -1,8 +1,10 @@
+import Activities from "../components/Activities.jsx";
+
 const ActivityLog = () => {
   return (
-    <>
-      <h1>ActivityLog</h1>
-    </>
+    <div className="mt-16 ml-40">
+      <Activities />
+    </div>
   );
 };
 

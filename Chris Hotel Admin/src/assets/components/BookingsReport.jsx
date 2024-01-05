@@ -223,10 +223,6 @@ const OrderReport = () => {
       <div className="outline-none pl-2 flex justify-evenly h-16 place-items-center ">
         <input
           className="pl-4 pr-4 bg-[#00000000] outline-none border-b-2 flex place-items-center justify-center h-1/2 border-[#1d4014] w-56"
-          onClick={() => {
-            setStatus("Pending");
-            updateTable("Pending");
-          }}
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
           type="text"
