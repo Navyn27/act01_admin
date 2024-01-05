@@ -1,6 +1,6 @@
 import Chart from "../components/Chart.jsx";
 import InfoCard from "../components/InfoCard.jsx";
-import DonutChart from "../components/Donut.jsx";
+import DonutChart from "../components/DonutChart.jsx";
 
 import Satisfaction from "../statics/icons/satisfaction.svg";
 import Occupancy from "../statics/icons/occupancy.svg";

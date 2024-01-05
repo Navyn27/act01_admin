@@ -11,6 +11,7 @@ import Activity from "../statics/icons/activity-log.svg";
 import Admins from "../statics/icons/admins.svg";
 import Invoices from "../statics/icons/invoices.svg";
 import Bookings from "../statics/icons/bookings.svg";
+import Gear from "../statics/icons/gear.svg";
 
 const Navbar = () => {
   const [currentTab, setCurrentTab] = useState("");
@@ -54,7 +55,7 @@ const Navbar = () => {
         }
         to="/activity"
       >
-        <img src={Activity} className="w-6 ml-[-25px]" alt="" />
+        <img src={Activity} className="w-4 ml-[-25px]" alt="" />
         <h1 className="links ml-[-45px] text-base">Activity</h1>
       </Link>
       <Link
@@ -68,7 +69,7 @@ const Navbar = () => {
         }
         to="/orders"
       >
-        <img src={Orders} className="w-6 ml-[-25px]" alt="Dashboard" />
+        <img src={Orders} className="w-5 ml-[-25px]" alt="Dashboard" />
         <h1 className="links ml-[-45px] text-base">Orders</h1>
       </Link>
       <Link
@@ -127,19 +128,19 @@ const Navbar = () => {
         <img src={Admins} className="w-6 ml-[-25px]" alt="" />
         <h1 className="links ml-[-45px] text-base">Admins</h1>
       </Link>
+      <Link
+        onClick={() => {
+          window.alert("Clicked");
+        }}
+        className="bg-[#1d4014] grid grid-cols-2 place-items-center h-12 w-36 rounded-full"
+        to="/admins"
+      >
+        <img src={Gear} className="w-6 ml-[-25px]" alt="" />
+        <h1 className="links ml-[-45px] text-base text-white">Manage</h1>
+      </Link>
       <div className="flex flex-col justify-around h-52"></div>
     </section>
   );
 };
 
 export default Navbar;
-
-{
-  /* <h1
-            className={
-              currentTab == "home" || currentTab == ""
-                ? "border-solid border-white border-b-2 links text-base"
-                : "links text-base slate-400"
-            }
-          > */
-}
